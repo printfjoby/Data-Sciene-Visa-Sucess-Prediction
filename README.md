@@ -14,31 +14,31 @@ Data set of a study abroad education consultency is used to train a model in ord
     df=pd.read_csv('data_final.csv')
     df
 
-    ![Input Screen](/images/1.jpg)
+  ![Input Screen](/images/1.jpg)
 
 #### Finding Mean, Median, Standard Deviation
     df.describe().transpose()
   
-    ![Input Screen](/images/2.jpg)
+  ![Input Screen](/images/2.jpg)
 
 #### Checking for null values
 
     df.apply(lambda x: sum(x.isnull()),axis=0)
 
-    ![Input Screen](/images/3.jpg)
+  ![Input Screen](/images/3.jpg)
 
 ### Finding Correlation
     cor=df.corr()
     cor
     
-      ![Input Screen](/images/4.jpg)
+  ![Input Screen](/images/4.jpg)
 
 ### Ploting Heat Map
 
     pyplot.figure(figsize=(30,30))
     sns.heatmap(cor,annot=True,cmap="RdYlGn")
     
-      ![Input Screen](/images/5.jpg)
+  ![Input Screen](/images/5.jpg)
 
 
 ### Checking Feature Importance
@@ -55,7 +55,7 @@ Data set of a study abroad education consultency is used to train a model in ord
     feat_importances.nlargest(16).plot(kind='barh')
     pyplot.show()
 
-      ![Input Screen](/images/6.jpg)
+  ![Input Screen](/images/6.jpg)
 
 ### Feature Score
 
@@ -72,7 +72,7 @@ Data set of a study abroad education consultency is used to train a model in ord
     featureScores.columns = ['Factors','Score']  #naming the dataframe columns
     print(featureScores.nlargest(16,'Score'))  #print 54 best features
 
-      ![Input Screen](/images/7.jpg)
+  ![Input Screen](/images/7.jpg)
 
 
 ### Splitting data into train and test
@@ -85,7 +85,7 @@ Data set of a study abroad education consultency is used to train a model in ord
     print(x_train)
     print(y_train)
 
-      ![Input Screen](/images/8.jpg)
+  ![Input Screen](/images/8.jpg)
 
 ## Applying Model
 ### Logistic Regression
@@ -101,7 +101,7 @@ Data set of a study abroad education consultency is used to train a model in ord
     score = accuracy_score(y_test, y_predict, normalize = True)
     print("Accuracy : ",score)
 
-      ![Input Screen](/images/9.jpg)
+  ![Input Screen](/images/9.jpg)
 
 ### Creating Confusion Matrix
 
@@ -114,7 +114,7 @@ Data set of a study abroad education consultency is used to train a model in ord
     all_sample_title = 'Accuracy Score: {0}'.format(score)
     pyplot.title(all_sample_title, size = 15)
 
-      ![Input Screen](/images/10.jpg)
+  ![Input Screen](/images/10.jpg)
 
 ### ROC Curve
 
@@ -132,7 +132,7 @@ Data set of a study abroad education consultency is used to train a model in ord
     #show the plot
     pyplot.show()
 
-      ![Input Screen](/images/11.jpg)
+  ![Input Screen](/images/11.jpg)
   
 ## Naive-Bayes
   
@@ -147,4 +147,4 @@ Data set of a study abroad education consultency is used to train a model in ord
     # Model Accuracy, how often is the classifier correct?
     print("Accuracy:",metrics.accuracy_score(y_test, y_predict_nb))
 
-      ![Input Screen](/images/12.jpg)
+  ![Input Screen](/images/12.jpg)
