@@ -1,13 +1,13 @@
 # Visa Success Predection
 
-Data set of a study abroad education consultency is used to train a model in order to predict the visa success rate. 
+Data set of a study abroad education consultancy is used to train a model in order to predict the visa success rate. 
 
 ### Importing libraries
 
     import pandas as pd
     import seaborn as sns
     from matplotlib import pyplot
-    from sklearn.externals import joblib`
+    from sklearn.externals import joblib
 
 ### Read processed data file
 
